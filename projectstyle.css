@@ -1,113 +1,123 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    background-color: rgb(221, 220, 219);
-    margin: 0;
-    padding: 0;
-    font-family: 'Poppins', sans-serif;
-}
-
-.details{
-    display: flex;
-    align-items: flex-start;
-    margin-top: 3rem;
-    justify-content: center;
-}
-
-.details-project{
-    border: 2px solid;
-    border-radius: 10px;
-    margin-left: 16rem;
-    max-width: 1300px;
-    max-height: 800px;
-    color: #ffffff;
-    
-}
-
-.details-project h1{
-    margin: 2rem;
-    text-align: center;
-    color: rgb(0, 0, 0);
-    
-   
-}
-
-.details-project p{
-    margin: 2rem;
-    color: rgb(0, 0, 0);
-    
-}
-
-.details-img{
-    margin: 2rem; 
-    flex-direction: column; /
-    gap: 3rem;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.details-img :hover{
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    transform: translateY(-8px);
-    
+body {
+  background-color: rgb(221, 220, 219);
+  font-family: 'Poppins', sans-serif;
+  color: #000;
 }
 
 
-.details-img img{
-    width: 500px;
-    height: 500px;
-    object-fit: cover;
-    border-radius: 10px;
-    margin-bottom: 1rem;
-    margin-right: 2rem;
-    
-    
+nav {
+  padding: 1rem;
+  background-color: rgb(255, 102, 0);
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.nav-con {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.My-Profile a {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
 }
 
 
-.back{
-    margin: 2rem;
+.back {
+  position: absolute;
+  top: 100px;
+  left: 30px;
+  z-index: 50;
 }
 
-.back-btn{
-    background-color: chocolate;
-    color: rgb(255, 255, 255);
-    padding: 1rem;
-    border-radius: 5px;
-    text-decoration: none;
+.back-btn {
+  background-color: chocolate;
+  color: #fff;
+  padding: 0.8rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-weight: 500;
 }
 
-.back-btn:hover{
-    background: #bb571d;
+.back-btn:hover {
+  background: #bb571d;
 }
 
 
-.container{
-    max-width: 1140px;
-    margin: 0 auto;
+.details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 6rem; 
+  padding: 0 1rem;
 }
 
-nav{
-    padding: 1rem;
-    background-color: rgb(255, 102, 0);
+.details-project {
+  border: 2px solid;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 1100px;
+  padding: 2rem;
+  margin: 0 auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #000;
 }
 
-.nav-con{
-    display: flex;
-    justify-content: space-between;
+.details-project h1 {
+  margin-bottom: 1rem;
+  text-align: center;
+  color: rgb(0, 0, 0);
 }
 
-.My-Profile a{
-    font-size: 2rem;
-    color: white;
-    text-decoration: none;
-    
+.details-project p {
+  margin: 1rem 0 2rem;
+  color: rgb(0, 0, 0);
+  line-height: 1.6;
+  text-align: center;
 }
 
-/*  Modal */
+
+.details-img {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 350px; 
+  gap: 1.5rem;
+  overflow-x: auto; 
+  padding-bottom: 1rem;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+}
+
+.details-img img {
+  width: 100%;
+  max-width: 350px; 
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.details-img img:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-8px);
+}
+
+
 .modal {
   display: none;
   position: fixed;
@@ -140,10 +150,69 @@ nav{
   cursor: pointer;
 }
 
-
 @keyframes zoomIn {
   from {transform: scale(0.6); opacity: 0;}
   to {transform: scale(1); opacity: 1;}
 }
 
 
+
+/* Tablet (iPad) */
+@media (max-width: 1024px) {
+  .details-project {
+    max-width: 90%;
+    padding: 1.5rem;
+  }
+
+  .details-img img {
+    max-width: 300px;
+    height: 250px;
+  }
+
+  .back {
+    top: 70px;
+    left: 20px;
+  }
+
+  .My-Profile a {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .details-project {
+    max-width: 95%;
+    padding: 1rem;
+  }
+
+  .details-img {
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  .details-img img {
+    max-width: 100%;
+    height: 230px;
+  }
+
+  .My-Profile a {
+    font-size: 1.5rem;
+  }
+
+  .back {
+    top: 70px;
+    left: 15px;
+  }
+
+  .back-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.95rem;
+  }
+
+  .close {
+    top: 20px;
+    right: 30px;
+    font-size: 30px;
+  }
+}
