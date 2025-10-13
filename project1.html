@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+<style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="projectstyle.css">
+
+</head>
+<body>
+    
+<nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="My-Profile"><a href="#">My Profile</a></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="back">
+    <a href="web.html"class="back-btn">ย้อนกลับ</a>
+</div>
+
+<div class="details">
+    <div class="details-img" data-aos="fade-up">
+    <img src="img/Drone1.1.jpeg" 
+         alt="ผลงาน1" class="clickable-img">
+    <img src="img/drone1.2.jpeg" 
+         alt="ผลงาน2" class="clickable-img">
+</div>
+
+    
+    </div>
+</div>
+
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+ 
+
+
+<div class="details-project">
+                <h1>การแข่งขันโดรนรายการหนูน้อยเจ้าเวหาชิงถ้วยพระราชทานพระบาทสมเด็จพระเจ้าอยู่หัวประจำปี 2568 สนามที่ 1</h1>
+                <p>ผมได้เข้าแข่งขันบินโดรนในประเภทยุทธวิธี ทำภารกิจเจาะลูกโป่ง ณ ศูนย์นิทรรศการและการประชุมไบเทค บางนา จังหวัดกรุงเทพมหานคร โดยมีบทบาทและหน้าที่เป็นผู้เขียนโค้ดควบคุมโดรน วางแผนการบินในสนาม และยังได้รับหน้าที่เป็นผู้นำของเพื่อน ผมได้เรียนรู้และฝึกฝนการเป็นผู้นำและเพื่อนร่วมทีมที่ดี ได้เรียนรู้การทำงานเป็นทีม การคิดอย่างเป็นขั้นเป็นตอน และการแก้ไขปัญหาเฉพาะหน้า ในรายการนี้เราได้รับรางวัลรองชนะเลิศอันดับ 2 และได้รับสิทธิ์ไปแข่งขันชิงถ้วยพระราชทานที่จังหวัดสงขลา ในวันที่ 14-16 พฤศจิกายน พ.ศ.2568</p>
+</div>
+    
+    
+
+
+
+
+
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".clickable-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+<style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="projectstyle.css">
+
+</head>
+<body>
+    
+<nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="My-Profile"><a href="#">My Profile</a></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="back">
+    <a href="web.html"class="back-btn">ย้อนกลับ</a>
+</div>
+
+<div class="details">
+    <div class="details-img" data-aos="fade-up">
+    <img src="img/robot2.1.png" 
+         alt="ผลงาน1" class="clickable-img">
+    <img src="img/robot2.3.png" 
+         alt="ผลงาน2" class="clickable-img">
+</div>
+
+    
+    </div>
+</div>
+
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+ 
+
+
+<div class="details-project">
+                <h1>การแข่งขันหุ่นยนต์ในงานสัปดาห์วิทยาศาสตร์แห่งชาติ ส่วนภูมิภาค ประจำปี 2568</h1>
+                <p>ในการแข่งขันนี้ต้องสร้างหุ่นยนต์ขึ้นมาจากบอร์ด Kidbright และต้องโยนปิงปองให้ลงกล่องใส่ลูกที่อยู่ข้างบนตัวหุ่น ผมได้รับหน้าที่เป็นคนเขียนโค้ด ออกแบบตัวหุ่นยนต์จากบอร์ดและประกอบหุ่นในขั้นตอนการสร้าง ผมได้เรียนรู้การใช้อุปกรณ์การช่างต่างๆ การออกแบบ การใช้ความคิดสร้างสรรค์ และการทำงานเป็นทีม ในส่วนตอนแข่งถึงทีมเราจะแพ้ในด้านคะแนนการโยนปิงปอง แต่ในเรื่องการเดินตามเส้นของหุ่นยนต์สามารถเป็นไปได้อย่างราบรื่น ทำให้ผมได้เรียนรู้เรื่องการตัดสินใจอย่างรวดเร็ว การแก้ไขปัญหาเฉพาะหน้าในการซ่อมตัวหุ่นยนต์และการประยุกต์ใช้วัสดุต่างๆมาเสริมตัวหุ่นยนต์</p>
+</div>
+    
+    
+
+
+
+
+
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".clickable-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+
+
+
+
+</body>
+</html>

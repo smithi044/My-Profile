@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+
+<style>
+        html{
+            scroll-behavior: smooth;
+        }
+        
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+    <link rel="stylesheet" href="projectstyle.css">
+
+</head>
+<body>
+    
+<nav>
+        <div class="container">
+            <div class="nav-con">
+                <div class="My-Profile"><a href="#">My Profile</a></div>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="back">
+    <a href="web.html"class="back-btn">ย้อนกลับ</a>
+</div>
+
+<div class="details">
+    <div class="details-img" data-aos="fade-up">
+    <img src="img/game1.1.png" 
+         alt="ผลงาน1" class="clickable-img">
+    <img src="img/game1.3.png" 
+         alt="ผลงาน2" class="clickable-img">
+</div>
+
+    
+    </div>
+</div>
+
+<div id="imgModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+ 
+
+
+<div class="details-project">
+                <h1>สร้างเกม 2D รณรงค์อนุรักษ์สิ่งแวดล้อม</h1>
+                <p>ผมได้สร้างเกมเพื่อนำส่งรายวิชา IS ในหัวข้อการอนุรักษ์สิ่งแวดล้อม ผมเลือกวิธีการสร้างเป็นเกมขึ้นมา เพราะคิดว่าการเรียนรู้โดยผ่านเกมจะทำให้เข้าถึงผู้คนได้ง่ายกว่า ผมได้ฝึกฝนการใช้โปรแกรม Unity เบื้องต้นจากงานนี้ และได้ฝึกฝนการเขียนโค้ดในภาษา C# ควบคู่ไปกับการใช้เอไอในการช่วยเขียนโค้ดและตรวจสอบความรอบคอบในการเขียนโค้ด</p>
+</div>
+    
+    
+
+
+
+
+
+
+<script>
+  const modal = document.getElementById("imgModal");
+  const modalImg = document.getElementById("modalImg");
+  const closeBtn = document.getElementsByClassName("close")[0];
+
+  document.querySelectorAll(".clickable-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "block";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+  };
+
+  modal.onclick = (e) => {
+    if (e.target === modal) modal.style.display = "none";
+  };
+</script>
+
+
+
+
+
+</body>
+</html>
